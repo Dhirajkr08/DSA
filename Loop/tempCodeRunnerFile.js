@@ -1,11 +1,10 @@
-function reverseNumber(num){
-//     let reverse=0
-//     for(let i=1;i<=num;i++){
-//         i=num%10
-//         reverse=reverse*10+i
-//         num=Math.floor(num/10)
+function printPattern(n){
+//     for(let i=0;i<n;i++){
+//         let str=''
+//         for(let j=0;j<n-i;j++){
+//             str+='*'
+//         }
+//         console.log(str)
 //     }
-//     return reverse
 // }
-// let num=123
-// console.log(reverseNumber(num))
+// printPattern(5)
