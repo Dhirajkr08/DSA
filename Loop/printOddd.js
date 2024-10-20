@@ -5,5 +5,5 @@ function printOdd(n){
         }
     }
 }
-
-printOdd(7)
+let n=7
+printOdd(n)
