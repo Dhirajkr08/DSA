@@ -10,3 +10,4 @@ function minimumInarr(arr){
 }
 let arr=[5,6,2,9,-2]
 console.log(minimumInarr(arr))
+//Drj
