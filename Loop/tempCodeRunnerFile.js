@@ -1,18 +1,11 @@
-function printPattern(n) {
-    for(let i=0;i<n;i++) {
-        let str=''
-        for(let j=0;j<n-i;j++){
-            str+='*'
-        }
-        console.log(str)    
-    }
-    for(let k=0;k<n;k++) {
-        let str=''
-        for(let l=0;l<k+1;l++){
-            str+="*"
-        }
-        console.log(str)
-    }
-    
-}
-printPattern(5)
+function fibonacciSeries(n){
+//     let a=0
+//     let b=1
+//     for(let i=2;i<=n;i++){
+//         let temp=a+b
+//         a=b
+//         b=temp
+//     }
+//     return a
+// }
+// console.log(fibonacciSeries(9))
