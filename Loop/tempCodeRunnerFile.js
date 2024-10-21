@@ -1,6 +1,8 @@
-function perfectSquare(n){
-//     for(let i=1;i*i<=n;i++){
-//         console.log(i*i)
+function sumOffactorial(n){
+//     let sum=1
+//     for(let i=1;i<=n;i++){
+//         sum*=i
 //     }
+//     return sum
 // }
-// perfectSquare(15)
+// console.log(sumOffactorial(5))
