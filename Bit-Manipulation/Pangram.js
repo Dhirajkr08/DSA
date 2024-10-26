@@ -1,4 +1,4 @@
-//here the question asking wheather 26 alphabet is present or not in the string
+//here the question asking whether 26 alphabet is present or not in the string
 function panGram(string){
     let set=new Set()
     string=string.toLowerCase()
