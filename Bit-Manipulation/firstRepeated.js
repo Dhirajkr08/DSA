@@ -17,3 +17,20 @@ function firstRepeated(s){
 }
 let s="sharpener"
 console.log(firstRepeated(s))
+
+//if you want to print e as an answer
+function repeatedChar(s){
+    let set={}
+    for(let i of s){
+        if(i in set){
+            return i
+        }
+        else{
+            set[i] = 1
+        }
+    }
+    return '#'
+}
+
+let t='Sharpener'
+console.log(repeatedChar(t))
