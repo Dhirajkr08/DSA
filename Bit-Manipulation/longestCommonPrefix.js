@@ -1,4 +1,5 @@
 function longestCommonPrefix(input){
+    if(!input.length)return "";
     input.sort()
     let left=input[0] , right=input[input.length-1] , ans=0;
 
