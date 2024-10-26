@@ -1,19 +1,11 @@
-function firstRepeated(s){
-//     let char={}
+function removeDuplicate(s){
+//     let ans=''
 //     for(let i of s){
-//         if(i in char){
-//             char[i] ++
-//         }
-//         else{
-//             char[i] = 1
+//         if(!ans.includes(i)){
+//             ans+=i
 //         }
 //     }
-//     for(let i of s){
-//         if(char[i]>1){
-//             return i
-//         }
-//     }
-//     return '#'
+//     return ans
 // }
-// let s="sharpener"
-// console.log(firstRepeated(s))
+// let s="programming"
+// console.log(removeDuplicate(s))
