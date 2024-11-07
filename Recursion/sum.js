@@ -16,3 +16,4 @@ function sum(n){
     return total()
 }
 let m=5
+console.log(sum(m))
