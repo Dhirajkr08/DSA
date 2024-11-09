@@ -1,8 +1,8 @@
 function mergeSort(nums){
     if(nums.length<=1)return nums
-    let index=Math.floor(Math.random()*nums.length)
-    let merge=nums[index]
-    let mid=[],right=[],left=[]
+    let index=Math.floor(Math.random()*nums.length);
+    let merge=nums[index]  
+    let right=[],left=[];mid=[]
     for(let i of nums){
         if(i<merge){
             left.push(i)
