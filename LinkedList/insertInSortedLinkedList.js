@@ -21,3 +21,4 @@ function insertInMiddle(head,k){
     temp.next=newHead
     return head
 }
+//didn't write the main  function 
