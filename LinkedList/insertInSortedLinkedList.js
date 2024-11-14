@@ -21,3 +21,4 @@ function insertInMiddle(head,k){
     temp.next=newHead
     return head
 }
+//adding commit
