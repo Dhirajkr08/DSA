@@ -5,7 +5,7 @@ class listNode{
     }
 }
 function moveRearinFront(head){
-    let first=head,second=null
+    let first=head,last=null
     while(first.next){
         second=first
         first=first.next
