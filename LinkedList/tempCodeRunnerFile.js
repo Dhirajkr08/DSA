@@ -28,6 +28,6 @@ function printLinkedList(head){
 let l=new listNode(1)
 l.next=new listNode(2)
 l.next.next=new listNode(3)
-l.next.next.next=new listNode(4)
+l.next.next=new listNode(4)
 l=removeKthNode(l,3)
 printLinkedList(l)
