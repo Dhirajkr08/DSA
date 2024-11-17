@@ -1,23 +1,26 @@
-class listNode{
+class linkedList{
     constructor(val){
         this.val = val;
-        this.next=null
+        this.next=null;
     }
+
 }
-function removeKthNode(head,k){
-    let newHead=new listNode(0)
-    newHead.next=head
-    let temp=newHead,count=0
-    while(temp.next){
-        count++
-        if(count%k===0){
-            temp.next=temp.next.next
-        }
-        else{
-            temp=temp.next
+function findStart(head){
+    let slow=head,fast=head
+    while(fast && fast.next){
+        slow=slow.next
+        fast=fast.next.next
+        if(slow===fast){
+            slow=head
+            while(slow !== fast){
+                slow=slow.next
+                fast=fast.next
+            }
+            return slow
         }
     }
-    return newHead.next
+    return null
+
 }
 function printLinkedList(head){
     while(head){
@@ -25,9 +28,12 @@ function printLinkedList(head){
         head=head.next
     }
 }
-let l=new listNode(1)
-l.next=new listNode(2)
-l.next.next=new listNode(3)
-l.next.next=new listNode(4)
-l=removeKthNode(l,3)
+let l=new linkedList(1)
+l.next=new linkedList(2)
+l.next.next=new linkedList(3)
+l.next.next.next=new linkedList(4)
+l.next.next.next.next=new linkedList(5)
+l.next.next.next.next.next=new linkedList(6)
+l.next.next.next.next.next.next=new linkedList(8)
+l=findStart(l)
 printLinkedList(l)
