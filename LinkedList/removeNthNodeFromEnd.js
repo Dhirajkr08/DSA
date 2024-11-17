@@ -1,15 +1,21 @@
-function removeNthNodeEnd(head,n){
-    let newNode=new ListNode(0)
-    newNode.next=head
-    let first=newNode,last=newNode
-    for(let i=0;i<=n;i++){
-        first=first.next
+class listNode{
+    constructor(val){
+        this.val = val;
+        this.next=null
     }
-    while(first){
-        first=first.next
-        last=last.next
+}
+function removeKthNode(head,k){
+    let newHead=new listNode(0)
+    newHead.next=head
+    let temp=newHead,count=0
+    while(temp.next){
+        count++
+        if(count%k===0){
+            temp.next=temp.next.next
+        }
+        else{
+            temp=temp.next
+        }
     }
-    last.next=last.next.next
-    return newNode.next
-
+    return newHead.next
 }
