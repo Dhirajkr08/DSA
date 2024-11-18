@@ -1,8 +1,10 @@
 ## Data Structures and Algorithms (DSA) Practice
 
-[clone](https://github.com/singhScriptor/DSA)
+
 
 Welcome to my DSA practice repository. This repository contains my progress and solutions as I navigate through various Data Structures and Algorithms.
+
+[clone](https://github.com/singhScriptor/DSA)
 
 ### Topics Covered
 
