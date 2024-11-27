@@ -1,10 +1,15 @@
 ## Data Structures and Algorithms (DSA) Practice
 
+Check out this [Data_Structure_js_gist](https://gist.github.com/singhScriptor/a053bd4bac816c7a067ba9fb203b6111) for more details.
 
 
-Welcome to my DSA practice repository. This repository contains my progress and solutions as I navigate through various Data Structures and Algorithms.
+Welcome to my DSA practice repository. This repository contains my progress and solutions as I navigate through various Data Structures and Algorithms.<br>
 
-[clone](https://github.com/singhScriptor/DSA)
+<b>Clone this Repository</b>
+```
+https://github.com/singhScriptor/DSA
+
+```
 
 ### Topics Covered
 
@@ -70,5 +75,4 @@ Welcome to my DSA practice repository. This repository contains my progress and 
      -   **Examples and Use Cases**: Practical examples of recursion
      -   **Comparisons with Iteration**: Pros and cons of recursion vs. iteration
      
-
 
