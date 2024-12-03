@@ -9,3 +9,7 @@ function sum(a=5,b=7){
 }
 //sum(null,20)
 sum(undefined)
+
+const arr1=[1,2,3]
+const str="1,2,3"
+console.log(arr1 == str)
