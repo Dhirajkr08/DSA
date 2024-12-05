@@ -1,8 +1,8 @@
 function commonPrefix(arr){
-    if(arr.length===0)return
+    if(arr.length===0)return ''
     arr.sort()
-    let left=arr[0],right=arr[arr.length-1],ans=0
-    while(ans< left.length && ans < right.length && left[ans]===right[ans]){
+    let ans='',left=arr[0],right=arr[arr.length-1];
+    while(ans< left.length && ans< right.length && left[ans]===right[ans]){
         ans++
     }
     return left.substring(0,ans)
