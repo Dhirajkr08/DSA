@@ -1,7 +1,4 @@
-
-// //this is function declaration
-// function message(a) {
+res(32)
+// function res(a){
 //     console.log(a)
 // }
-// let a="hello"
-// add(a)
