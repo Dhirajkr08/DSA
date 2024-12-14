@@ -202,24 +202,71 @@
 // function greeting(me)
 
 //resolve reject
-function message(m){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-            if(m){
-                resolve('done')
-            }
-            else{
-                reject('fail')
-            }
-        },2000)
-    })
-}
-message(true)
-    .then((m)=>{
-        console.log(m)
+// function message(m){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//             if(m){
+//                 resolve('done')
+//             }
+//             else{
+//                 reject('fail')
+//             }
+//         },2000)
+//     })
+// }
+// message(true)
+//     .then((m)=>{
+//         console.log(m)
+// })
+// .catch((m)=>{
+//     console.log(m)
+// }) 
+
+// function message(name,age){
+//     alert(name)
+//     alert(age)
+// }
+// message('Dhiraj',26)
+
+let list=['apple','oranges','banana']
+console.log(list[0])
+list[0]='coconut'
+console.log(list)
+//list[0].replace('banana')
+console.log(list)
+list.shift()
+console.log(list)
+list.pop([1])
+console.log(list)
+
+let fruit=['jackFruit','pomegranate','papaya','guava','brinjal']
+fruit.splice(0,3)
+console.log(fruit)
+fruit.push('Hello')
+console.log(fruit)
+fruit.pop()
+console.log(fruit)
+
+
+let atr='Hry Potter!'
+let newAtr=atr.replace('Hry',"Harry")
+console.log(newAtr)
+
+fruit.forEach((i)=>{
+    console.log(i)
 })
-.catch((m)=>{
-    console.log(m)
-}) 
+
+//apply
+
+function sum(a,b){
+    return a+b
+}
+let arr=[1,5]
+console.log(sum.apply(null,arr))
 
 
+function greet(message){
+    console.log(`${message},my name is ${this.name}`)
+}
+const p={name:"Dhiraj"}
+greet.call(p,'Good morning')
