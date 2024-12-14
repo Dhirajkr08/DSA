@@ -74,38 +74,116 @@
 // let max=Math.max.apply(null,number)
 // console.log(max)
 
-class example{
-    constructor(name,number){
-        this.name = name
-        this.number = number
-    }
-    print(){
-        return this.name + " " + this.number
-    }
-}
+// class example{
+//     constructor(name,number){
+//         this.name = name
+//         this.number = number
+//     }
+//     print(){
+//         return this.name + " " + this.number
+//     }
+// }
 // let e=new example('Jphn',23)
 // example.prototype.print.apply(e)
-let e=new example('John',23)
-console.log(example.prototype.print.apply(e))
+// let e=new example('John',23)
+// console.log(example.prototype.print.apply(e))
 
-let tb={
-    fullName:function(){
-        return (this.firstName+' '+this.lastName)
-    }
-}
-let person={
-    firstName:"John",
-    lastName:"Cena"
-}
-console.log(tb.fullName.apply(person))
+// let tb={
+//     fullName:function(){
+//         return (this.firstName+' '+this.lastName)
+//     }
+// }
+// let person={
+//     firstName:"John",
+//     lastName:"Cena"
+// }
+// console.log(tb.fullName.apply(person))
 
-function sum(arr){
-    return arr.reduce((a,b)=>a+b,0)
-}
-let arr=[1,2,3,4,5]
-console.log(sum(arr))
+// function sum(arr){
+//     return arr.reduce((a,b)=>a+b,0)
+// }
+// let arr=[1,2,3,4,5]
+// console.log(sum(arr))
 
 //using spread operator
-function sum(){
+function sum(arr1,arr2){
+    return[...arr1, ...arr2]
+    
+
+}
+let arr1=[1,2,3,4,5]
+let arr2=[5,6,7,8,9]
+console.log(sum(arr1,arr2))
+
+//object properties
+let person={
+    name: "Dhiraj",
+    age:25,
+    greet:function(){
+        console.log('Hello,my name is '+ this.name)
+    }
+}
+console.log(person.name)
+person.greet()
+
+//api call methods 
+//first one async await method where we use function as 
+//ex: 
+async function call(addItem) {
+    try {
+        let result=await axios.post('link/data',addItem)
+        console.log(result)
+
+    }
+    catch (error) {
+        console.log('Error!',error)
+    }
     
 }
+
+//2nd method
+function call (addItem){
+    axios.post("",addItem)
+    .then((res)=>{
+        console.log(res.data)
+    })
+    .catch((error)=>{
+        console.log("Error!",error)
+    })
+}
+
+//copying array using spread operator
+let arr=[1,2,3,4,5]
+let copy=[...arr]
+console.log(copy)
+
+function sum(a,b,c){
+    return a+b+c
+}
+const num=[1,2,3]
+console.log(sum(...num))
+
+//converting string into array
+let string='Hello'
+let char=[...string]
+console.log(char)
+
+//rest parameter
+function arrr(a,b,...rest){
+    console.log(a)
+    console.log(b)
+    console.log(rest)
+}
+arrr(1,2,3,4,5)
+
+const defaultSetting={
+    time:'dark',
+    Notification:true, 
+    location:"enabled"
+}
+const userSetting={
+    Notification:false, 
+    location:'disabled'
+}
+const finalSetting={...defaultSetting,...userSetting}
+console.log(finalSetting)
