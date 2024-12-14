@@ -106,84 +106,120 @@
 // console.log(sum(arr))
 
 //using spread operator
-function sum(arr1,arr2){
-    return[...arr1, ...arr2]
+// function sum(arr1,arr2){
+//     return[...arr1, ...arr2]
     
 
-}
-let arr1=[1,2,3,4,5]
-let arr2=[5,6,7,8,9]
-console.log(sum(arr1,arr2))
+// }
+// let arr1=[1,2,3,4,5]
+// let arr2=[5,6,7,8,9]
+// console.log(sum(arr1,arr2))
 
-//object properties
-let person={
-    name: "Dhiraj",
-    age:25,
-    greet:function(){
-        console.log('Hello,my name is '+ this.name)
-    }
-}
-console.log(person.name)
-person.greet()
+// //object properties
+// let person={
+//     name: "Dhiraj",
+//     age:25,
+//     greet:function(){
+//         console.log('Hello,my name is '+ this.name)
+//     }
+// }
+// console.log(person.name)
+// person.greet()
 
-//api call methods 
-//first one async await method where we use function as 
-//ex: 
-async function call(addItem) {
-    try {
-        let result=await axios.post('link/data',addItem)
-        console.log(result)
+// //api call methods 
+// //first one async await method where we use function as 
+// //ex: 
+// async function call(addItem) {
+//     try {
+//         let result=await axios.post('link/data',addItem)
+//         console.log(result)
 
-    }
-    catch (error) {
-        console.log('Error!',error)
-    }
+//     }
+//     catch (error) {
+//         console.log('Error!',error)
+//     }
     
-}
+// }
 
-//2nd method
-function call (addItem){
-    axios.post("",addItem)
-    .then((res)=>{
-        console.log(res.data)
+// //2nd method
+// function call (addItem){
+//     axios.post("",addItem)
+//     .then((res)=>{
+//         console.log(res.data)
+//     })
+//     .catch((error)=>{
+//         console.log("Error!",error)
+//     })
+// }
+
+// //copying array using spread operator
+// let arr=[1,2,3,4,5]
+// let copy=[...arr]
+// console.log(copy)
+
+// function sum(a,b,c){
+//     return a+b+c
+// }
+// const num=[1,2,3]
+// console.log(sum(...num))
+
+// //converting string into array
+// let string='Hello'
+// let char=[...string]
+// console.log(char)
+
+// //rest parameter
+// function arrr(a,b,...rest){
+//     console.log(a)
+//     console.log(b)
+//     console.log(rest)
+// }
+// arrr(1,2,3,4,5)
+
+// const defaultSetting={
+//     time:'dark',
+//     Notification:true, 
+//     location:"enabled"
+// }
+// const userSetting={
+//     Notification:false, 
+//     location:'disabled'
+// }
+// const finalSetting={...defaultSetting,...userSetting}
+// console.log(finalSetting)
+
+// function hello(message,greeting){
+//     console.log(greeting)
+//     setTimeout(()=>{
+//         console.log(message)
+//     },1000)
+// }
+// let greeting="good Morning"
+// let message="hey there"
+// hello(message,greeting)
+
+//promise resolve reject
+// function greeting(me)
+
+//resolve reject
+function message(m){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            if(m){
+                resolve('done')
+            }
+            else{
+                reject('fail')
+            }
+        },2000)
     })
-    .catch((error)=>{
-        console.log("Error!",error)
-    })
 }
+message(true)
+    .then((m)=>{
+        console.log(m)
+})
+.catch((m)=>{
+    console.log(m)
+}) 
 
-//copying array using spread operator
-let arr=[1,2,3,4,5]
-let copy=[...arr]
-console.log(copy)
 
-function sum(a,b,c){
-    return a+b+c
-}
-const num=[1,2,3]
-console.log(sum(...num))
-
-//converting string into array
-let string='Hello'
-let char=[...string]
-console.log(char)
-
-//rest parameter
-function arrr(a,b,...rest){
-    console.log(a)
-    console.log(b)
-    console.log(rest)
-}
-arrr(1,2,3,4,5)
-
-const defaultSetting={
-    time:'dark',
-    Notification:true, 
-    location:"enabled"
-}
-const userSetting={
-    Notification:false, 
-    location:'disabled'
-}
-const finalSetting={...defaultSetting,...userSetting}
-console.log(finalSetting)
