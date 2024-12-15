@@ -335,4 +335,15 @@ let answer=function(a,b){
 }
 console.log(answer(4,6))
 
-//
+//function declaration with no parameter
+function answer1(){
+    console.log('hello')
+}
+answer1()
+
+//function declaration with parameter
+function answer2(greet){
+    return greet
+}
+let greet1='Hey there'
+console.log(answer2(greet1))
