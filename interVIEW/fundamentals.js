@@ -272,78 +272,166 @@
 // greet.call(p,'Good morning')
 
 
-const per=function(){
-    console.log(`hello ${this.first} ${this.last}`)
-}
-let per1={
-    first:'Dhiraj',
-    last:"Singh"
-}
-per.apply(per1)
+// const per=function(){
+//     console.log(`hello ${this.first} ${this.last}`)
+// }
+// let per1={
+//     first:'Dhiraj',
+//     last:"Singh"
+// }
+// per.apply(per1)
 
-function sum(a,b,c,d){
-    return a+b+c+d 
-}
-let arr=[3,6,9,12]
-console.log(sum.apply(null,arr))
+// function sum(a,b,c,d){
+//     return a+b+c+d 
+// }
+// let arr=[3,6,9,12]
+// console.log(sum.apply(null,arr))
 
-//call
-function greet(greeting,name){
-    console.log(greeting,name)
-}
-let name='Dhiraj'
-greet.call(this,'hello',name)
+// //call
+// function greet(greeting,name){
+//     console.log(greeting,name)
+// }
+// let name='Dhiraj'
+// greet.call(this,'hello',name)
 
 
-function intro(gr){
-    console.log(gr + " " + this.name)
+// function intro(gr){
+//     console.log(gr + " " + this.name)
+
+// }
+// let person={
+//     name:"Dhiraj"
+// }
+// intro.call(person,'Good Morning')
+
+// //spread
+// let arr1=[1,2,3,4]
+// let arr2=[5,6,7,8]
+// let newArr=[...arr1, ...arr2]
+// console.log(newArr)
+
+// //reduce
+// function add(arr){
+//     return arr.reduce((a,b)=>a+b,0)
+// }
+// let jrr=[1,2,3,4]
+// console.log(add(jrr))
+
+// //concat
+// let frr=[1,3,4,6,8]
+// let srr=[4,9,2,0,7]
+// let mrr=[12,13,14,1,4]
+// console.log(frr.concat(srr,mrr))
+// console.log(frr)
+
+// //function expression
+// let result=function(){
+//     console.log('hello')
+// }
+// result()
+// //with paraameter
+// let answer=function(a,b){
+//     return a+b 
+// }
+// console.log(answer(4,6))
+
+// //function declaration with no parameter
+// function answer1(){
+//     console.log('hello')
+// }
+// answer1()
+
+// //function declaration with parameter
+// function answer2(greet){
+//     return greet
+// }
+// let greet1='Hey there'
+// console.log(answer2(greet1))
+
+// //maximum in array using apply
+// let arr5=[1,2,3,4,8,9,12,4,8,16,31,9,30,29]
+// console.log(Math.max.apply(null,arr5))
+
+// function add(arr){
+//     return arr.reduce((a,b)=>a+b,0)
+// }
+// let krr=[3,5,7,9,0,11]
+// console.log(add(krr))
+
+// var a="heloo"
+// 'use restrict'
+// console.log(a)
+
+// //use of map can for square the each element of array and can also use for string of array into uppercase
+// let grr=[1,2,3,4,5]
+// let ans=grr.map(function(nums){
+//     return nums*nums
+// })
+// console.log(ans)
+
+// let fruit=['grapes','orange','papaya']
+// let final=fruit.map(word=>word.toUpperCase())
+// console.log(final)
+
+// //pow method can be use for square the number cube the number basically it raise the number in powers
+// let res=Math.pow(2,3)
+// console.log(res)
+
+// let Res=Math.pow(2,4)
+// console.log(Res)
+
+
+//function expression
+
+//apply in javascript
+function details(){
+    console.log(this.firstName + " "+ this.lastName)
 
 }
 let person={
-    name:"Dhiraj"
+    firstName: 'Raju',
+    lastName:'itus'
 }
-intro.call(person,'Good Morning')
+details.apply(person)
 
-//spread
-let arr1=[1,2,3,4]
-let arr2=[5,6,7,8]
-let newArr=[...arr1, ...arr2]
-console.log(newArr)
-
-//reduce
-function add(arr){
-    return arr.reduce((a,b)=>a+b,0)
+//sum using apply
+function sum(a,b,c){
+    return a+b+c    
 }
-let jrr=[1,2,3,4]
-console.log(add(jrr))
+let arr=[1,2,3]
+console.log(sum.apply(null,arr))
 
-//concat
-let frr=[1,3,4,6,8]
-let srr=[4,9,2,0,7]
-let mrr=[12,13,14,1,4]
-console.log(frr.concat(srr,mrr))
-console.log(frr)
+//maximum using apply
+let numbe=[1,2,3,8,3,6,11,9,7]
+console.log(Math.max.apply(null,numbe))
 
-//function expression
-let result=function(){
-    console.log('hello')
+//call 
+function greet(name){
+    console.log(`${this},${name}`)
 }
-result()
-//with paraameter
-let answer=function(a,b){
-    return a+b 
-}
-console.log(answer(4,6))
+greet.call('hello','Dhriaj')
 
-//function declaration with no parameter
-function answer1(){
-    console.log('hello')
-}
-answer1()
+//spread operator 
 
-//function declaration with parameter
-function answer2(greet){
-    return greet
+let rr=[1,2],pr=[3,4] 
+console.log([...rr, ...pr])
+
+let re=rr.concat(pr)
+console.log(re)
+
+//prototype
+class answer{
+    constructor(name,number){
+        this.name = name    
+        this.number = number
+    }
+
 }
-let greet1='Hey there'
-console.log(answer2(greet1))
+answer.prototype.details=function(){
+        return this.name + " "+ this.number
+}
+let p1=new answer('Rm',345)
+
+console.log(p1.details())
+
+function sum()
